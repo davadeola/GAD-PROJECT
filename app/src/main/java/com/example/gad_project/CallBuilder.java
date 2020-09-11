@@ -10,7 +10,7 @@ import static android.provider.ContactsContract.CommonDataKinds.Website.URL;
 public class CallBuilder {
 
 
-    private static final String baseURL  = "https://gadsapi.herokuapp.com/api";
+    private static final String baseURL  = "https://docs.google.com/forms/d/e";
 
     private static HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
 

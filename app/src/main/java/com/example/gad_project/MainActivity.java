@@ -18,4 +18,12 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(true);
         getSupportActionBar().setTitle("LeaderBoard");
     }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+
+    }
 }
