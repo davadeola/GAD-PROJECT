@@ -3,6 +3,7 @@ package com.example.gad_project;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,21 +13,20 @@ public class SkillFragment extends Fragment {
 
 
 
+
     public SkillFragment() {
         // Required empty public constructor
     }
 
 
-    public static SkillFragment newInstance(String param1, String param2) {
-        SkillFragment fragment = new SkillFragment();
-        Bundle args = new Bundle();
 
-        return fragment;
-    }
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
        
     }
 

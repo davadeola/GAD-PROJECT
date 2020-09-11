@@ -4,4 +4,7 @@
     <color name="colorPrimaryDark">#000</color>
     <color name="colorAccent">#fff</color>
     <color name="colorText">#fff</color>
+    <color name="goldYellow">#FFA500</color>
+    <color name="hintColor">#696969</color>
+    <color name="gradientStart">#FFA500</color>
 </resources>
