@@ -6,5 +6,18 @@
     android:id="@+id/toolbar"
     android:background="@color/colorPrimary"
     app:titleTextAppearance="@style/TextAppearance.AppCompat.Headline"
-    app:titleTextColor="@color/colorAccent"/>
+    app:titleTextColor="@color/colorAccent"
+    android:padding="10dp">
+
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/submit_link"
+        android:text="@string/submit"
+        android:textColor="@color/colorPrimary"
+        android:textAllCaps="false"/>
+
+</androidx.appcompat.widget.Toolbar>
 

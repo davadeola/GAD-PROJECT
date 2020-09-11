@@ -53,8 +53,8 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter<MainRecyclerAdapte
 
         private ImageView badgeImg;
         private TextView nameTextView, detailsTextView;
-        private static final String skillText = "skill IQ score,";
-        private static final String hoursText = "learning hours,";
+        private static final String skillText = " skill IQ score, ";
+        private static final String hoursText = " learning hours, ";
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -69,7 +69,7 @@ public class MainRecyclerAdapter extends RecyclerView.Adapter<MainRecyclerAdapte
             Glide.with(mContext).load(currPerson.getBadgeUrl()).placeholder(R.drawable.ic_baseline_image_24).into(badgeImg);
 
             String displayText = listType.equals("skill") ? skillText : hoursText;
-            int number = listType.equals("skill") ? currPerson.getScore() : currPerson.getHours();
+            int number = currPerson.getValue();
 
             nameTextView.setText(currPerson.getName());
             detailsTextView.setText(new StringBuilder(number+displayText+currPerson.getCountry()));

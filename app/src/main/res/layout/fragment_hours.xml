@@ -6,10 +6,11 @@
     tools:context=".HoursFragment">
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_hours"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/layout_skill_item" />
 
 </FrameLayout>

@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.View;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -27,6 +30,15 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("LeaderBoard");
 
         viewPager = findViewById(R.id.view_pager);
+
+
+        toolbar.findViewById(R.id.submit_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent submitIntent = new Intent(MainActivity.this, SubmitActivity.class);
+                startActivity(submitIntent);
+            }
+        });
 
         setUpViewPager();
     }
@@ -58,4 +70,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+
+
 }

@@ -2,7 +2,14 @@ package com.example.gad_project;
 
 public class Person {
     private String name, country, badgeUrl;
-    int  score, hours;
+    private int  value;
+
+    public Person(String name, String country, String badgeUrl, int value){
+        this.name = name;
+        this.country = country;
+        this.badgeUrl = badgeUrl;
+        this.value = value;
+    }
 
     public String getBadgeUrl() {
         return badgeUrl;
@@ -12,13 +19,7 @@ public class Person {
         this.badgeUrl = badgeUrl;
     }
 
-    public int getHours() {
-        return hours;
-    }
 
-    public void setHours(int hours) {
-        this.hours = hours;
-    }
 
     public String getCountry() {
         return country;
@@ -28,13 +29,7 @@ public class Person {
         this.country = country;
     }
 
-    public int getScore() {
-        return score;
-    }
 
-    public void setScore(int score) {
-        this.score = score;
-    }
 
     public String getName() {
         return name;
@@ -42,5 +37,13 @@ public class Person {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
     }
 }

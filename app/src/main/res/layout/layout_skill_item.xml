@@ -8,7 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
 
 
         <ImageView
@@ -41,7 +42,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="packed" />
+            app:layout_constraintVertical_chainStyle="packed"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"/>
 
         <TextView
             android:id="@+id/details_textView"
@@ -52,7 +55,8 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/name_textView"
             app:layout_constraintStart_toStartOf="@+id/name_textView"
-            app:layout_constraintTop_toBottomOf="@+id/name_textView" />
+            app:layout_constraintTop_toBottomOf="@+id/name_textView"
+            android:textColor="@color/hintColor"/>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline"
