@@ -66,7 +66,12 @@ public class SubmitActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
                 if (response.isSuccessful()){
+                    SuccessResponseDialog successResponseDialog = new SuccessResponseDialog();
+                    successResponseDialog.showDialog(SubmitActivity.this);
                     Toast.makeText(getApplicationContext(), "Successfully submitted", Toast.LENGTH_SHORT).show();
+                }else {
+                    FailureResponseDialog failureResponseDialog = new FailureResponseDialog();
+                    failureResponseDialog.showDialog(SubmitActivity.this);
                 }
             }
 
