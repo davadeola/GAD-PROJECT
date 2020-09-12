@@ -1,7 +1,10 @@
 package com.example.gad_project;
 
+import android.app.Activity;
+import android.content.Context;
 import android.net.Uri;
 import android.util.Log;
+import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -18,6 +21,10 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import javax.net.ssl.HttpsURLConnection;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ApiUtil {
 
@@ -114,6 +121,36 @@ public class ApiUtil {
         }
 
         return  personArrayList;
+    }
+
+
+
+    public static void submitWork(Context context, Activity activity, String email, String  fname, String lname, String link){
+        CallService callService = CallBuilder.buildService(CallService.class);
+        Call<Void> submit = callService.submit(email, fname, lname, link);
+
+        submit.enqueue(new Callback<Void>() {
+            @Override
+            public void onResponse(Call<Void> call, Response<Void> response) {
+                if (response.isSuccessful()){
+                    SuccessResponseDialog successResponseDialog = new SuccessResponseDialog();
+                    successResponseDialog.showDialog(activity);
+                    Toast.makeText(context, "Successfully submitted", Toast.LENGTH_SHORT).show();
+                }else {
+                    FailureResponseDialog failureResponseDialog = new FailureResponseDialog();
+                    failureResponseDialog.showDialog(activity);
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Void> call, Throwable t) {
+                if (t instanceof IOException){
+                    Toast.makeText(activity, "Check your internet connection", Toast.LENGTH_SHORT).show();
+                }else{
+                    Log.e("FAILED", "Error from server");
+                }
+            }
+        });
     }
 
 }

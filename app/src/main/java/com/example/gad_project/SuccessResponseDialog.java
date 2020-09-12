@@ -14,7 +14,7 @@ public class SuccessResponseDialog {
     public void showDialog(Activity activity){
         dialog= new Dialog(activity);
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setCancelable(false);
+        dialog.setCancelable(true);
         dialog.setContentView(R.layout.success_layout);
 
         ImageView closeBtn =  dialog.findViewById(R.id.closeBtn);
