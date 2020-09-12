@@ -9,5 +9,6 @@
         android:id="@+id/rv_skills"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/layout_skill_item" />
+        tools:listitem="@layout/layout_skill_item"
+        android:padding="3dp"/>
 </FrameLayout>
