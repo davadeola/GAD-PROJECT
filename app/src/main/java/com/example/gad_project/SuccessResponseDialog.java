@@ -17,7 +17,13 @@ public class SuccessResponseDialog {
         dialog.setCancelable(false);
         dialog.setContentView(R.layout.success_layout);
 
-
+        ImageView closeBtn =  dialog.findViewById(R.id.closeBtn);
+        closeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
 
 
         dialog.show();

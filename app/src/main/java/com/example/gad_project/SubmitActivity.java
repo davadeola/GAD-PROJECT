@@ -40,20 +40,21 @@ public class SubmitActivity extends AppCompatActivity {
         link = findViewById(R.id.editText_link);
         email = findViewById(R.id.editTextTextEmailAddress);
         submitButton = findViewById(R.id.button);
+        confirmDialog = new ConfirmDialog();
 
         submitButton.setOnClickListener(view -> {
-            confirmDialog = new ConfirmDialog();
+
             confirmDialog.showDialog(SubmitActivity.this);
+            submitWork();
 
         });
 
-        confirmDialog.dialog.findViewById(R.id.confirmButton).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                submitWork();
-            }
-        });
-
+//        confirmDialog.dialog.findViewById(R.id.confirmButton).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//            }
+//        });
+//
 
 
     }

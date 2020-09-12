@@ -10,7 +10,7 @@ import static android.provider.ContactsContract.CommonDataKinds.Website.URL;
 public class CallBuilder {
 
 
-    private static final String baseURL  = "https://docs.google.com/forms/d/e";
+    private static final String baseURL  = "https://docs.google.com/forms/d/e/";
 
     private static HttpLoggingInterceptor loggingInterceptor = new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY);
 
@@ -18,7 +18,7 @@ public class CallBuilder {
             .addInterceptor(loggingInterceptor);
 
 
-    private static Retrofit.Builder builder = new Retrofit.Builder().baseUrl(URL)
+    private static Retrofit.Builder builder = new Retrofit.Builder().baseUrl(baseURL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttp.build());
 
